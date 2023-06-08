@@ -12,8 +12,8 @@
 // console.log(arr5);
 // console.log(arr6);
 
-const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
-const arr2 = [9, 10];
+// const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+// const arr2 = [9, 10];
 // console.log(arr.length);
 // arr.length = 3;
 // console.log(arr);
@@ -42,6 +42,26 @@ const arr2 = [9, 10];
 // console.log(arr1.splice(4, 1, "del"));
 // console.log(arr1);
 
-for (let item of arr1) {
-  console.log(item);
-}
+// for (let item of arr1) {
+//   console.log(item);
+// }
+
+const obj1 = new Object();
+const obj2 = {};
+const obj3 = { name: "엄성준", age: 25 };
+
+// console.log(obj1);
+// console.log(obj2);
+// console.log(obj3);
+
+obj3["email"] = "umseongjun@naver.com";
+obj3.job = "coder";
+
+delete obj3.name;
+
+// console.log("name" in obj3);
+// console.log("age" in obj3);
+
+console.log(Object.keys(obj3));
+console.log(Object.values(obj3));
+console.log(Object.hasOwnProperty("name"));
