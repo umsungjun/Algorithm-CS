@@ -154,3 +154,15 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 
 - 자바스크립트의 변수는 선언 -> 초기화 -> 할당 과정을 거치는데 TDZ는 선언 ~ 초기화 단계의 사이를 뜻 함
 - 런타임 전에 선언단계가 미리 선언이 되지만 초기화 단계 이전에 호출하면 참조오류가 발생 함
+
+## 리액트의 Lifecycle API
+
+- Mounting(컴포넌트가 브라우저 상에 나타날 때) : componentDidMount
+- Updating(컴포넌트의 props나 state가 업데이트 될 때) : componentDidUpdate
+- UnMounting(컴포넌트가 브라우저 상에서 사라질 때) : componenetWillUnmount
+
+## JSX(JavaScriptXML)
+
+- 자바스크립트에 XML을 추가한 것 (XML: eXtensibel Markup Language)
+- 공식적인 자바스크립트 문법이 아님
+- 왜 쓰는가? 하나의 파일에서 자바스크립트와 Html을 동시에 이용할 수 있음
