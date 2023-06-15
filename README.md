@@ -186,3 +186,13 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 2. 슬라이스 생성: Redux Toolkit에서 슬라이스(slice)는 상태(state)와 리듀서(reducer)를 결합한 개념입니다. createSlice 함수를 사용하여 슬라이스를 생성하고, 해당 슬라이스의 초기 상태와 리듀서를 정의합니다.
 3. 액션 생성자 생성: Redux Toolkit은 액션 생성자를 자동으로 생성해주는 기능을 제공합니다. createSlice 함수를 사용하면 액션 생성자를 자동으로 생성하고, 리듀서 내부에서 액션을 처리할 수 있도록 도와줍니다.
 4. 컴포넌트에서 Redux 사용: Redux Toolkit으로 설정한 스토어를 컴포넌트에서 사용할 수 있습니다. react-redux 라이브러리의 Provider 컴포넌트로 스토어를 제공하고, useSelector 훅을 사용하여 상태를 가져오고, useDispatch 훅을 사용하여 액션을 디스패치할 수 있습니다.
+
+## Props와 State의 차이
+
+- props와 state의 가장 큰 차이는 props는 부모 컴포넌트에서 상속 받는 데이터이기 때문에 직접 수정이 불가능함 그에 반해 state는 컴포넌트 내부에서 생성되고 값을 수정할 수 있음
+
+## SSR(Server Side Rendering) VS CSR(Client Side Rendering)
+
+- SSR: 페이지내용을 서버에서 그린 다음 브라우저로 전달, 페이지를 이동할 때마다 서버에 새로운 페이지를 요청
+- CSR: 페이지의 내용을 브라우저에서 그림, React를 예로보면 index.js파일만 로드 하고 내용만 바뀜 => SPA(Single Page Aplication)
+- SEO에 단점이 있음, 웹봇이 크롤링 할 때는 웹이 로드되기 이전에 빈 상태 코드를 크롤링 해가기 때문
