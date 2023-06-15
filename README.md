@@ -166,3 +166,10 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 - 자바스크립트에 XML을 추가한 것 (XML: eXtensibel Markup Language)
 - 공식적인 자바스크립트 문법이 아님
 - 왜 쓰는가? 하나의 파일에서 자바스크립트와 Html을 동시에 이용할 수 있음
+
+## React Hook
+
+- Class Component의 불편한을 해결하기 위해 Functional Component를 사용하는 리액트 훅이 등장 함
+- 함수형 컴포넌트에서도 state를 가질 수 있게 해줌
+- 즉 class컴포넌트에서 사용하는 did mount, render등을 안해도 됨
+- 리액트 훅을 통해서 함수형 컴포넌트에서도 클래스형 컴포넌트의 작업들을 수행할 수 있음
