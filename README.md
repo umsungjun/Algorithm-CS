@@ -196,3 +196,8 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 - SSR: 페이지내용을 서버에서 그린 다음 브라우저로 전달, 페이지를 이동할 때마다 서버에 새로운 페이지를 요청
 - CSR: 페이지의 내용을 브라우저에서 그림, React를 예로보면 index.js파일만 로드 하고 내용만 바뀜 => SPA(Single Page Aplication)
 - SEO에 단점이 있음, 웹봇이 크롤링 할 때는 웹이 로드되기 이전에 빈 상태 코드를 크롤링 해가기 때문
+
+## 완벽한 DeepCopy
+
+- const object = {name:엄성준, age:25, food:{us:pizza, jp: ramen}}
+- 위와 같이 선언 및 할당이 된 객체가 있을 때 어떻게 깊은 복사를 해야 될까?라는 고민을 해보았는데 일반적으로 1depth만 복사할 때는 spread 연산자를 통해서 const object2 = {... object1}을 통해서 복사하면 되지만 이렇게 복사할 시 문제점이 있습니다. object2의 객체 안의 객체 즉 2depth에 있는 food의 객체 요소를 변경하게 되면 원본 객체 object의 food 요소에도 영향을 준다는 겁니다. 2depth에도 영향을 안주는 완벽한 DeepCopy를 하기 위해서는 lodash 모듈의 cloneDeep(object)를 이용해서 원본 배열을 복사해 주면 완벽한 깊은 복사를 할 수 있다는 걸 알게 되었습니다!
