@@ -207,3 +207,7 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 - HTML 문서의 첫 줄에 위치하는 선언문입니다.
 - DOCTYPE은 Document Type의 약어로, 문서 유형을 나타냅니다.
 - 한 줄로 표현 하면 이 선언문은 웹 브라우저에게 현재 문서가 HTML이라는 종류의 문서임을 알려주는 문장입니다.
+
+## CSS(Casecading Style Sheets)란?
+
+- CSS는 Cascading Style Sheets의 약자입니다. 그렇다면 Cascading의 의미는 무엇일까요? Cascading의 의미는 폭포입니다. 폭포는 위에서 아래로 떨어지는 뜻을 의미합니다.
