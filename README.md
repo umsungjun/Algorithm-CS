@@ -149,11 +149,12 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 
 - 정적 타입(미리 타입을 지정)언어 이기 때문에 컴파일 단계에서 오류를 잡을 수 있기 때문에 자바스크립트의 큰 단점을 보완해 줌
 - 타입을 미리 지정해주기 때문에 메모리를 절약 할 수 있음
+- 타입을 미리 지정해주는게 왜 메모리를 줄일 수 있는걸까? 그 이유는 자바스크립트에서는 특정한 타입에는 메모리를 가장 크게 할당해 주기 때문에 타입 스크립트를 이용해서 타입을 미리 지정해주면 메모리를 최소화 할 수 있는 것이다.
 - 브라우저 호환성 문제를 해결 할 수 있음 컴파일 과정에서 ES6+ 문법을 ES5 또는 ES3로 변경 해줌
 
 ## 호이스팅
 
-- 자바스크립트에서 호이스티이란? 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당 하는 것 이로 인해 var로 변수를 선언한 뒤 선언전인 위에서 호출을 하게 되면 참조 오류가 발생해야 하는데 undefiend가 출력 됨
+- 자바스크립트에서 호이스팅이란? 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것 으로 인해 var로 변수를 선언한 뒤 선언 전인 위에서 변수를 호출 하게 되면 참조 오류가 발생해야 하는데 undefiend가 출력 되는 것이 호이스팅임
 
 ## TDZ(Temporal Dead Zone)
 
@@ -164,7 +165,7 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 
 - Mounting(컴포넌트가 브라우저 상에 나타날 때) : componentDidMount
 - Updating(컴포넌트의 props나 state가 업데이트 될 때) : componentDidUpdate
-- UnMounting(컴포넌트가 브라우저 상에서 사라질 때) : componenetWillUnmount
+- UnMounting(컴포넌트가 브라우저 상에서 사라질 때) : componentWillUnmount
 
 ## JSX(JavaScriptXML)
 
@@ -194,12 +195,12 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 
 ## Props와 State의 차이
 
-- props와 state의 가장 큰 차이는 props는 부모 컴포넌트에서 상속 받는 데이터이기 때문에 직접 수정이 불가능함 그에 반해 state는 컴포넌트 내부에서 생성되고 값을 수정할 수 있음
+- props와 state의 가장 큰 차이는 props는 부모 컴포넌트에서 상속 받는 데이터이기 때문에 직접 수정이 불가능합니다. 그에 반해 state는 컴포넌트 내부에서 생성되고 값을 수정할 수 있습니다.
 
 ## SSR(Server Side Rendering) VS CSR(Client Side Rendering)
 
 - SSR: 페이지내용을 서버에서 그린 다음 브라우저로 전달, 페이지를 이동할 때마다 서버에 새로운 페이지를 요청
-- CSR: 페이지의 내용을 브라우저에서 그림, React를 예로보면 index.js파일만 로드 하고 내용만 바뀜 => SPA(Single Page Aplication)
+- CSR: 페이지의 내용을 브라우저에서 그림, React를 예로보면 index.js파일만 로드 하고 내용만 바뀜 => SPA(Single Page Application)
 - SEO에 단점이 있음, 웹봇이 크롤링 할 때는 웹이 로드되기 이전에 빈 상태 코드를 크롤링 해가기 때문
 
 ## 완벽한 DeepCopy
