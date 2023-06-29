@@ -33,13 +33,13 @@ rl.on("line", function (line) {
 // 1 ≤ str의 길이 ≤ 20
 // str은 알파벳으로 이루어진 문자열입니다.
 
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+// const readline = require("readline");
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
 
-let input = [];
+// let input = [];
 
 rl.on("line", function (line) {
   input = [line];
@@ -55,4 +55,28 @@ rl.on("line", function (line) {
   });
   // console.log(str)
   console.log(newStr.join(""));
+});
+
+// 문제 설명
+// 두 정수 a, b가 주어질 때 다음과 같은 형태의 계산식을 출력하는 코드를 작성해 보세요.
+
+// a + b = c
+// 제한사항
+// 1 ≤ a, b ≤ 100
+
+const readline = require("readline");
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// let input = [];
+
+rl.on("line", function (line) {
+  input = line.split(" ");
+}).on("close", function () {
+  console.log(
+    `${Number(input[0])} + ${Number(input[1])} =`,
+    Number(input[0]) + Number(input[1])
+  );
 });
