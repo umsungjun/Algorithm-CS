@@ -1,36 +1,14 @@
-import { styled } from "styled-components";
+import { useCountStore } from "./store/countStore";
 
 function App() {
+  const { count, countUp, countDown } = useCountStore(); // 선언한 useCountStore를 불러와야 함
   return (
-    <GridBody>
-      <div>·</div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div>·</div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div>·</div>
-    </GridBody>
+    <>
+      <h1>{count}</h1>
+      <button onClick={() => countUp()}>+</button>
+      <button onClick={() => countDown()}>-</button>
+    </>
   );
 }
 
 export default App;
-
-const GridBody = styled.div`
-  width: 50%;
-  height: 70vh;
-  border: 1px solid black;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-
-  > div {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10rem;
-  }
-`;
