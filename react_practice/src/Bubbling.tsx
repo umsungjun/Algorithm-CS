@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Bubbling() {
   return (
     <form onClick={() => alert("form")}>
