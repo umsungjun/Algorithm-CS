@@ -16,13 +16,14 @@ const ScrollTest = () => {
     await fakeStoreAPI.get(page);
   };
   return (
-    <div>
+    <div id="target">
       <h1>Infinity Scroll Example</h1>
       <InfiniteScroll
         dataLength={100}
         next={fetchMoreData}
         hasMore={true}
         loader={<h4>Loading...</h4>}
+        scrollableTarget="target"
       >
         {/* {items.map((item, index) => (
           <div key={index}>{item}</div>
