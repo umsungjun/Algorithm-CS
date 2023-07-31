@@ -17,6 +17,10 @@
 
 <img src="https://cphinf.pstatic.net/mooc/20170712_75/1499826291828lfvjK_PNG/1.1_-03.png?type=w760">
 
+## HTML은 무엇의 약자이고 어떤 걸 의미하는지 또한 HTML 파일에서 `<!DOCTYPE html>` 이 의미하는 걸 설명해 주세요.
+
+HTML은 Hypertext Markup Language의 약어로 페이지와 그 내용을 구조화하기 위해 사용하는 마크업 언어입니다. 또한 HTML 파일의 최상단에 선언하는 `<!DOCTYPE html>`이 의미하는 것은 Document Type의 약어로 HTML 문서가 어떤 버전의 HTML 또는 XHTML로 작성되었는지 브라우저에게 알려주는 선언문입니다. 선언의 목적은 각 브라우저가 HTML 문서를 동일하게 인식할 수 있도록 하고, 문서 간의 호환성을 높이기 위함입니다.
+
 ## 브라운저 렌더링 원리
 
 웹 브라우저에서 웹 페이지를 로드할 때, 브라우저는 서버로부터 HTML 파일과 CSS 파일을 다운로드합니다. HTML 파일은 브라우저에서 파싱되어 Document Object Model (DOM)으로 변환됩니다. DOM은 웹 페이지의 구조를 표현하는 트리 구조입니다.
