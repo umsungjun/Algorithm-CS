@@ -51,9 +51,35 @@ const : 블록 스코프 변수를 선언하는 키워드로, 선언과 동시�
 
 <img src="./assets/closures.JPG" alt="클로져 예제" />
 
-## 호이스팅에 대해서 설명해주세요.
+## 이벤트 위임에 대해서 설명해 주세요.
 
-- 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것으로 인해 var로 변수를 선언한 했을 때 선언 전인 위에서 변수를 호출하게 되면 참조 오류가 발생해야 하는데 undefined가 출력 되는 현상입니다.
+예를 들어 버튼 100개를 만들고 버튼 100개 하나하나마다 같은 종류의 이벤트 핸들러를 추가해야 할 때, 이벤트 위임은 개별 요소에 대한 이벤트 핸들러를 하나의 상위 요소에 등록하고, 이벤트가 상위 요소에서 발생한 후에 해당 이벤트를 실제 대상 요소에 맞게 처리하는 방식을 말합니다.
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Event Delegation Example</title>
+</head>
+<body>
+  <div id="button-container">
+    <button class="btn">Button 1</button>
+    <button class="btn">Button 2</button>
+    <!-- ... 98 more buttons ... -->
+    <button class="btn">Button 100</button>
+  </div>
+  <script>
+    const buttonContainer = document.getElementById('button-container');
+
+    buttonContainer.addEventListener('click', function(event) {
+      if (event.target && event.target.classList.contains('btn')) {
+        ... 실행로직
+      }
+    });
+
+  </script>
+</body>
+</html>
 
 ## 브라운저 렌더링 원리
 
