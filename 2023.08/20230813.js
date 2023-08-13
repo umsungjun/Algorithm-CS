@@ -15,15 +15,20 @@
 // arr	intervals	result
 // [1, 2, 3, 4, 5]	[[1, 3], [0, 4]]	[2, 3, 4, 1, 2, 3, 4, 5]
 
-function solution(arr, intervals) {
-  let newArr = [];
-  const result = [];
-  for (let i = 0; i < intervals.length; i++) {
-    for (let j = intervals[i][0]; j <= intervals[i][1]; j++) {
-      newArr.push(arr[j]);
-    }
-    result.push(...newArr);
-    newArr = [];
-  }
-  return result;
+// function solution(arr, intervals) {
+//   let newArr = [];
+//   const result = [];
+//   for (let i = 0; i < intervals.length; i++) {
+//     for (let j = intervals[i][0]; j <= intervals[i][1]; j++) {
+//       newArr.push(arr[j]);
+//     }
+//     result.push(...newArr);
+//     newArr = [];
+//   }
+//   return result;
+// }
+
+for (var i = 0; i < 3; i++) {
+  console.log(i, j);
+  for (var j = 0; j < 3; j++) {}
 }
