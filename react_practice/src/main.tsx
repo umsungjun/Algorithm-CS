@@ -8,10 +8,10 @@ import Test from "./Test.tsx";
 import Bubbling from "./Bubbling.tsx";
 import Center from "./Center.tsx";
 import LinkPractice from "./LinkPractice.tsx";
-import ScrollIntoViewTest from "./scrollIntoViewTest.tsx";
+import PdfTest from "./PdfTest.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
-    <ScrollIntoViewTest />
+    <PdfTest />
   </BrowserRouter>
 );
