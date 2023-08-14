@@ -9,9 +9,8 @@ import Bubbling from "./Bubbling.tsx";
 import Center from "./Center.tsx";
 import LinkPractice from "./LinkPractice.tsx";
 import PdfTest from "./PdfTest.tsx";
+import { PDFViewer } from "@react-pdf/renderer";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <BrowserRouter>
-    <PdfTest />
-  </BrowserRouter>
+  <PdfTest />
 );
