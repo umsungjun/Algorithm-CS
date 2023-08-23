@@ -10,7 +10,15 @@ import Center from "./Center.tsx";
 import LinkPractice from "./LinkPractice.tsx";
 import PdfTest from "./PdfTest.tsx";
 import { PDFViewer } from "@react-pdf/renderer";
+import ReactQueryTest from "./ReactQueryTest.tsx";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <PdfTest />
+  <QueryClientProvider client={queryClient}>
+    <ReactQueryDevtools initialIsOpen={true} />
+    <ReactQueryTest />
+  </QueryClientProvider>
 );
