@@ -9,7 +9,7 @@ import Bubbling from "./Bubbling.tsx";
 import Center from "./Center.tsx";
 import LinkPractice from "./LinkPractice.tsx";
 import PdfTest from "./PdfTest.tsx";
-import { PDFViewer } from "@react-pdf/renderer";
+
 import ReactQueryTest from "./ReactQueryTest.tsx";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
