@@ -70,3 +70,58 @@ function solution(my_string) {
 
   return Object.values(alphabet);
 }
+
+// 문제 설명
+// 정수 배열 arr가 주어집니다. arr를 이용해 새로운 배열 stk를 만드려고 합니다.
+
+// 변수 i를 만들어 초기값을 0으로 설정한 후 i가 arr의 길이보다 작으면 다음 작업을 반복합니다.
+
+// 만약 stk가 빈 배열이라면 arr[i]를 stk에 추가하고 i에 1을 더합니다.
+// stk에 원소가 있고, stk의 마지막 원소가 arr[i]보다 작으면 arr[i]를 stk의 뒤에 추가하고 i에 1을 더합니다.
+// stk에 원소가 있는데 stk의 마지막 원소가 arr[i]보다 크거나 같으면 stk의 마지막 원소를 stk에서 제거합니다.
+// 위 작업을 마친 후 만들어진 stk를 return 하는 solution 함수를 완성해 주세요.
+
+// 제한사항
+// 1 ≤ arr의 길이 ≤ 100,000
+// 1 ≤ arr의 원소 ≤ 100,000
+// 입출력 예
+// arr	result
+// [1, 4, 2, 5, 3]	[1, 2, 3]
+
+function solution(arr) {
+  const stk = [];
+  let i = 0;
+  while (i < arr.length) {
+    if (stk.length === 0) {
+      stk.push(arr[i]);
+      i++;
+    } else {
+      if (stk[stk.length - 1] < arr[i]) {
+        stk.push(arr[i]);
+        i++;
+      } else if (stk[stk.length - 1] >= arr[i]) {
+        stk.pop();
+      }
+    }
+  }
+  return stk;
+}
+
+// 두 수의 합
+// 문제 설명
+// 0 이상의 두 정수가 문자열 a, b로 주어질 때, a + b의 값을 문자열로 return 하는 solution 함수를 작성해 주세요.
+
+// 제한사항
+// 1 ≤ a의 길이 ≤ 100,000
+// 1 ≤ b의 길이 ≤ 100,000
+// a와 b는 숫자로만 이루어져 있습니다.
+// a와 b는 정수 0이 아니라면 0으로 시작하지 않습니다.
+// 입출력 예
+// a	b	result
+// "582"	"734"	"1316"
+// "18446744073709551615"	"287346502836570928366"	"305793246910280479981"
+// "0"	"0"	"0"
+
+function solution(a, b) {
+  return (BigInt(a) + BigInt(b)).toString();
+}
