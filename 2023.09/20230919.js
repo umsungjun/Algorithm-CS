@@ -33,3 +33,28 @@
 /* FCFS의 선점형 스케줄링 방식
 
 - 답안: RR(Round Robin) */
+
+/*  #include
+
+int main(void) {
+
+	int sum = 0;
+
+	int i = 0;
+
+	for(i = 0; i <= 10; i++) {
+
+		if(i % 2 != 0)
+
+			continue;
+
+		sum += i;
+
+	}
+
+	printf("%d", i + sum);
+
+
+}
+
+- 답안: 41 */
