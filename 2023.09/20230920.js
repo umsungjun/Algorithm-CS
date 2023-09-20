@@ -40,3 +40,44 @@
 ② TFTP, 비연결성, 고속
 
 - 답안: ① TCP ② UDP */
+
+/* #include
+
+int main(void) {
+
+	int score[6];
+
+	int max = 0, min = 12;
+
+	float sum = 0;
+
+	
+
+	for(int i = 0; i<6; i++) {
+
+		score[i] = i*i;
+
+		sum += score[i];
+
+	}
+
+	
+
+	for(int i = 0; i<6; i++) {
+
+		if(max < score[i])
+
+			max = score[i];
+
+		if(min > score[i])
+
+			min = score[i];
+
+	}
+
+	
+
+	printf("%.2f", (sum-max-min)/4.0);
+
+- 답안: 7.50
+} */
