@@ -1,30 +1,34 @@
 /* class Gisafirst {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		int a[] = new int[8];
+        // 정수 배열 a를 선언하고, 크기 8의 배열을 생성합니다.
+        int a[] = new int[8];
 
-		int i = 0;
+        // 배열 a의 인덱스를 나타내는 변수 i를 초기화합니다.
+        int i = 0;
 
-		int n = 11;
+        // 10진수 숫자를 이진수로 변환할 숫자 n을 초기화합니다.
+        int n = 11;
 
-		while(n > 0) {
+        // n이 0보다 큰 동안 반복합니다.
+        while (n > 0) {
 
-			a[i++] = n % 2;
+            // n을 2로 나눈 나머지를 배열 a의 현재 인덱스 i에 저장합니다.
+            a[i++] = n % 2;
 
-			n /= 2;
+            // n을 2로 나눕니다. 나누고 난 뒤 n은 더 작아집니다.
+            n /= 2;
+        }
 
-		}
+        // 배열 a를 역순으로 출력합니다.
+        for (i = 7; i >= 0; i--) {
+            // 배열 a의 각 요소를 출력합니다.
+            System.out.printf("%d", a[i]);
+        }
+    }
+} */
 
-		for(i=7; i >= 0; i--) {
+/* 경로제어 기능, 라우터
 
-			System.out.printf("%d", a[i]);
-
-		}
-
-	}
-
-
-}
-
-- 답안: 00001011 */
+- 답안: 네트워크 계층 */
