@@ -42,3 +42,28 @@ int main() {
 /* 통합, 모듈간상호작용
 
 - 답안: ㉤ Integration */
+
+/* #include
+
+int main() {
+
+	int i = 1;
+
+	int n = 0;
+
+	while(i <= 50) {
+
+		if(i % 7 == 0)
+
+			n += i;
+
+		i++;
+
+	}
+
+	printf("%d", n);
+
+
+}
+
+- 답안: 196 */
