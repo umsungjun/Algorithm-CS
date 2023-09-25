@@ -71,3 +71,16 @@ int main() {
 /* 최단작업우선, 선점형의 경우 최단잔여시간우선
 
 - 답안: SJF */
+
+/* def af(a, b):
+
+    return a + b
+
+def sf(a, b):
+
+    return a - b
+
+
+print(sf(af(4, 5),6))
+
+- 답안: 3 */
