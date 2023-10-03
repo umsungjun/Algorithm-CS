@@ -17,3 +17,24 @@
 ② 소스, 세그먼트위치
 
 - 답안: ① ㉣ sequence  ② ㉢ acknowledgement */
+
+/* #include
+
+int main() {
+
+	int n;
+
+	int sum=0;
+
+	scanf("%d", &n);
+
+	for(int i=0; i <= n; i++)
+
+		sum += i;
+
+	printf("%d", sum);
+
+
+}
+
+- 답안: 15 */
