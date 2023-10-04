@@ -11,3 +11,8 @@
 /* ER 다이어그램
 
 - 답 : ① 개체 : 고객, 책, 출판사  ② 관계 : 구매, 공급 */
+
+/* NAT (Network Address Translation)
+
+  ㅇ 1개의 실제 공인 IP 주소에, 다량의 가상 사설 IP 주소를 할당 및 매핑하는,
+     1:1 또는 1:多 주소 변환(Address Translation) 방식 */
