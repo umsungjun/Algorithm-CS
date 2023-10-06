@@ -72,6 +72,49 @@
         <p class="itemP">2,300.00</p>
       </div>
     </div>
+    <div class="totalBox">
+      <p>TOTAL :</p>
+      <p>(USD) &nbsp;&nbsp; $ 8,100</p>
+    </div>
+    <div class="remarkBox">[ REMARK ]</div>
+    <div class="piIdBox">PI-202309070008</div>
+    <div class="bookingInfoWrapper">
+      <div class="bookingInfoBox">
+        <p>PORT OF LOADING</p>
+        <p>INCHEON</p>
+        <p>PORT OF FINAL DESTINATION</p>
+        <p>MADAGASCAR / TAMATAVE</p>
+        <p>INSURANCE</p>
+        <p>NONE</p>
+        <p>SPECIAL TERMS & CONDITIONS</p>
+        <p>NONE</p>
+      </div>
+    </div>
+    <div class="doubleBorder"></div>
+    <p class="bankTitle">*BANK ACCOUNT FOR T/T*</p>
+    <div class="bankSignBox">
+      <div class="bankInfoBox">
+        <p class="bold alignItemCenter">BENEFICIARY'S NAME</p>
+        <p class="alignItemCenter">WINI LOGISTICS INC.</p>
+        <p class="bold alignItemCenter">BENEFICIARY'S ADDRESS</p>
+        <p>
+          3F, HANDOK BLDG., 2645, NAMBUSUNHWAN-RO, GANGNAM-GU, SEOUL, 06271,
+          SOUTH KOREA
+        </p>
+        <p class="bold alignItemCenter">BANK ACCOUNT NO.</p>
+        <p class="alignItemCenter">150-910011-16538</p>
+        <p class="bold alignItemCenter">BANK NAME</p>
+        <p class="alignItemCenter">KEB HANA BANK</p>
+        <p class="bold alignItemCenter">SWIFT</p>
+        <p class="alignItemCenter">KOEXKRSEXXX</p>
+        <p class="bold alignItemCenter">BANK ADDRESS</p>
+        <p class="alignItemCenter">66, ULCHIRO, JUNG-GU, SEOUL, KOREA</p>
+      </div>
+      <div class="signBox">
+        <p>signd by</p>
+        <img class="sign" src="../2023.10/sign.png" />
+      </div>
+    </div>
   </body>
   <style>
     body {
@@ -87,6 +130,11 @@
 
     .bold {
       font-weight: 600;
+    }
+
+    .alignItemCenter {
+      display: flex;
+      align-items: center;
     }
 
     .alignCenter {
@@ -208,6 +256,84 @@
       text-align: center;
       font-size: 0.9rem;
       padding: 0.5rem 0;
+    }
+
+    .totalBox {
+      width: 100%;
+      padding: 0.3rem 0 0.3rem 0.3rem;
+      font-weight: 600;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 3px solid black;
+      border-bottom: 3px solid black;
+    }
+
+    .remarkBox {
+      width: 100%;
+      margin-top: 1.5rem;
+      font-weight: 600;
+    }
+
+    .piIdBox {
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: right;
+      padding-right: 10rem;
+      color: #5b72be;
+    }
+
+    .bookingInfoWrapper {
+      margin-top: 6rem;
+      width: 100%;
+    }
+
+    .bookingInfoBox {
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      display: grid;
+      grid-template-columns: repeat(2, 17rem);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .doubleBorder {
+      margin-top: 2rem;
+      width: 100%;
+      height: 0.15rem;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    .bankTitle {
+      width: 100%;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+
+    .bankSignBox {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bankInfoBox {
+      font-size: 0.9rem;
+      display: grid;
+      grid-template-columns: 12rem 25em;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 0.1rem;
+    }
+
+    .signBox {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .sign {
+      width: 15rem;
+      height: 10rem;
     }
   </style>
 </html>
