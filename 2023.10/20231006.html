@@ -1,14 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <h1>PDF로 변환되는 HTML</h1>
-      <p>이 내용은 PDF로 다운로드됩니다.</p>
+    <img class="logoImg" src="../2023.10/logo.png" />
+    <div class="addressInfo">
+      <p>
+        3F, HANDOK BLDG, 2645, NAMBUSUNHWAN-RO, GANGNAM-GU, SEOUL, 06271,
+        S.KOREA
+      </p>
+      <p>Tel : 02-576-5533 / Fax : 02-576-5599</p>
+    </div>
+    <div class="staffDateBox">
+      <div class="staffDateBoxTop">
+        <p>Contact Point : Hyunah-Nam</p>
+        <p>Date : 2023-09-18</p>
+      </div>
+      <div class="staffDateBoxBottom">
+        <p>Due Date : 2023-09-23</p>
+      </div>
+    </div>
+    <div class="logoWarningBox">
+      <img class="invoiceLogo" src="../2023.10/invoiceLogo.png" />
+      <div class="logoWarningBoxBottom">
+        <p>*This invoice will be expired and booking will be canceled</p>
+        <p>if you do not pay until the due date.</p>
+      </div>
+    </div>
+
+    <div class="invoiceTitleBox">
+      <p class="bold">Bill To.</p>
+      <p>Ranaivoson</p>
+      <p class="invoiceTitleBoxRight">&lt;Ocean Outbound&gt;</p>
+    </div>
+    <div class="invoiceContentBox">
+      <div class="invoiceContentLeft">
+        <p class="bold">INVOICE NO</p>
+        <p>PI-202309070008</p>
+      </div>
+      <div class="invoiceContentRight">
+        <p class="bold">INVOICE DATE</p>
+        <p>2023-09-18</p>
+      </div>
+    </div>
+    <div class="itemTitleBox">
+      <p class="alignCenter">DESCRIPTION</p>
+      <p class="alignCenter">CUR</p>
+      <p class="alignCenter">PER</p>
+      <p class="alignCenter">RATE</p>
+      <p class="alignCenter">AMT(CUR)</p>
+      <p class="alignCenter">EX.RATE</p>
+      <p class="alignCenter">AMT(KRW)</p>
+      <p class="alignCenter">VAT</p>
+    </div>
+    <div class="itemBox">
+      <div class="item">
+        <p class="itemP">SHIPPING COST (ALL-IN)</p>
+        <p class="itemP">USD</p>
+        <p class="itemP">40HQ</p>
+        <p class="itemP">2,300.00</p>
+        <p class="itemP">2,300.00</p>
+      </div>
+      <div class="item">
+        <p class="itemP">SHIPPING COST (ALL-IN)</p>
+        <p class="itemP">USD</p>
+        <p class="itemP">40HQ</p>
+        <p class="itemP">2,300.00</p>
+        <p class="itemP">2,300.00</p>
+      </div>
     </div>
   </body>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .bold {
+      font-weight: 600;
+    }
+
+    .alignCenter {
+      text-align: center;
+    }
+
+    .logoImg {
+      width: 22rem;
+    }
+
+    .addressInfo {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .staffDateBox {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .staffDateBoxTop {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .staffDateBoxBottom {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.8rem;
+    }
+
+    .logoWarningBox {
+      margin-top: 0.5rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .invoiceLogo {
+      width: 12rem;
+    }
+
+    .logoWarningBoxBottom {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+      color: red;
+    }
+
+    .invoiceTitleBox {
+      margin-top: 3rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 10rem 10rem 1fr;
+      font-size: 0.9rem;
+      border-bottom: 3px solid #1c0992;
+      padding-bottom: 0.3rem;
+    }
+
+    .invoiceTitleBoxRight {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 400;
+    }
+
+    .invoiceContentBox {
+      width: 100%;
+      display: flex;
+      padding-top: 0.3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 3px solid #1c0992;
+    }
+
+    .invoiceContentLeft,
+    .invoiceContentRight {
+      width: 50%;
+      display: grid;
+      grid-template-columns: 10rem 10rem;
+    }
+
+    .itemTitleBox {
+      margin-top: 1.5rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 12rem repeat(7, 1fr);
+      font-weight: 600;
+      background: #d9d9d9 !important;
+      -webkit-print-color-adjust: exact;
+      padding: 0.5rem 0;
+      border-bottom: 3px solid black;
+    }
+
+    .itemBox {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 12rem repeat(7, 1fr);
+    }
+
+    .itemP {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+    }
+  </style>
 </html>
