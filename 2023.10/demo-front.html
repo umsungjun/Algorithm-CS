@@ -1,0 +1,292 @@
+<!-- live server 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #title {
+        text-align: left;
+      }
+
+      #img-list {
+        list-style: none;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+
+      #upload-video-section {
+        width: 400px;
+      }
+      #inspection-image-video input[type='file'] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+      }
+
+      .grayText {
+        color: #8d9095;
+        font-size: 0.8rem;
+      }
+
+      .plusImgWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .plusImgBox {
+        width: 55px;
+        height: 50px;
+        background-color: #d9d9d9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        border: 1px solid black;
+      }
+
+      .delete-image {
+        width: 100%;
+      }
+
+      .upload-button {
+        font-weight: 700;
+        border: 1px solid black;
+        padding: 0.1rem 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <h3>simple upload</h3> -->
+    <form class="filebox" enctype="multipart/form-data">
+      <!-- <section id="qc-info">
+        <input type="text" name="inspection-id" value="INSPECTION-SOMETHING">
+    </section> -->
+      <table id="inspection-image-video">
+        <tbody>
+          <tr>
+            <th colspan="2" id="title">
+              7. 검수 사진 및 동영상
+              <span class="grayText">판매자에게는 보이지 않습니다.</span>
+            </th>
+          </tr>
+          <tr>
+            <th class="grayText">검수 사진</th>
+            <td class="btn ea4">
+              <ul id="img-list">
+                <li class="plusImgWrapper">
+                  <div class="plusImgBox">+</div>
+                  <input
+                    type="file"
+                    name="fileImages"
+                    style="display: none"
+                    value=""
+                  />
+                  <input
+                    type="button"
+                    class="delete-image"
+                    name="delete-image"
+                    value="삭제"
+                  />
+                </li>
+                <li class="plusImgWrapper">
+                  <div class="plusImgBox">+</div>
+                  <input
+                    type="file"
+                    name="fileImages"
+                    style="display: none"
+                    value=""
+                  />
+                  <input
+                    type="button"
+                    class="delete-image"
+                    name="delete-image"
+                    value="삭제"
+                  />
+                </li>
+                <li class="plusImgWrapper">
+                  <div class="plusImgBox">+</div>
+                  <input
+                    type="file"
+                    name="fileImages"
+                    style="display: none"
+                    value=""
+                  />
+                  <input
+                    type="button"
+                    class="delete-image"
+                    name="delete-image"
+                    value="삭제"
+                  />
+                </li>
+                <li class="plusImgWrapper">
+                  <div class="plusImgBox">+</div>
+                  <input
+                    type="file"
+                    name="fileImages"
+                    style="display: none"
+                    value=""
+                  />
+                  <input
+                    type="button"
+                    class="delete-image"
+                    name="delete-image"
+                    value="삭제"
+                  />
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th class="grayText">검수 동영상</th>
+            <td class="btn ea4">
+              <!-- <input
+                class="upload-name"
+                value="첨부파일"
+                placeholder="첨부파일"
+                readonly
+              /> -->
+              <!-- <label class="form-button" for="fileVideo">파일찾기</label> -->
+              <!-- <input
+                type="file"
+                id="fileVideo"
+                name="fileVideo"
+                onchange="set_file_name(this)"
+              /> -->
+              <input
+                class="upload-button"
+                type="button"
+                onclick="upload_file()"
+                value="파일업로드"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <hr />
+    <h3>chunked upload</h3>
+    <!-- <video id="video" controls></video> -->
+  </body>
+
+  <!-- preview -->
+  <script>
+    document.querySelectorAll('input[name=fileImages]').forEach((el) => {
+      el.addEventListener('change', preview_image);
+    });
+
+    function click_sibling_file() {
+      const inputFile = this.nextElementSibling;
+      inputFile.click();
+    }
+
+    document.querySelectorAll('input[name=delete-image]').forEach((el) => {
+      el.addEventListener('click', delete_image);
+    });
+
+    function delete_image() {
+      this.previousElementSibling.value = null;
+      this.previousElementSibling.previousElementSibling.src =
+        'https://image.autowini.com/IMG/renew/about/bg_approved_re.png';
+    }
+
+    function preview_image(e) {
+      console.log(e.target);
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          const imageUrl = event.target.result;
+          const imagePreview = e.target.previousElementSibling;
+          imagePreview.src = imageUrl;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+
+  <!-- upload -->
+  <script>
+    function set_file_name(el) {
+      console.log(el);
+      document.querySelector('.upload-name').value = cleanup_chrome_fakepath(
+        el.value
+      );
+    }
+
+    function cleanup_chrome_fakepath(filename) {
+      // C:\fakepath\filename
+      // cleanup('C:\fakepath\') -> filename
+      return filename.replace(/.*[/\\]/, '');
+    }
+
+    function upload_file() {
+      fetch('http://localhost:8080/files/qc/inspection', {
+        method: 'POST',
+        body: new FormData(document.getElementById('fileUploadForm')),
+      }).then((response) => {
+        if (response.ok) {
+          alert('파일 업로드 완료');
+          document.querySelector('.upload-name').value = '';
+        } else {
+          console.error('업로드 실패:', response.statusText);
+        }
+      });
+    }
+
+    // async function upload_files() {
+    //  await upload_images();
+    //  await upload_videos();
+    //}
+
+    // async function upload_images() {
+    // }
+
+    function upload_chunked_files() {
+      const fileInput = document.getElementById('upload-video');
+      const file = fileInput.files[0];
+      const chunkSize = 5 * 1024 * 1024; // 5MB
+      let start = 0;
+
+      async function uploadChunk(start) {
+        const chunk = file.slice(start, start + chunkSize);
+        const formData = new FormData();
+        formData.append('file', chunk);
+
+        const response = await fetch('http://localhost:8080/video/qc', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Content-Range': `bytes ${start}-${start + chunk.size - 1}/${
+              file.size
+            }`,
+          },
+        });
+
+        if (response.ok) {
+          start += chunk.size;
+          if (start < file.size) {
+            uploadChunk(start);
+          } else {
+            alert('파일 업로드 완료');
+          }
+        } else {
+          console.error('업로드 실패:', response.statusText);
+        }
+      }
+
+      // 첫 번째 청크 업로드 시작
+      uploadChunk(start);
+    }
+  </script>
+</html>
