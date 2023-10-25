@@ -17,6 +17,6 @@
 
 function solution(a, b) {
   // return (a/b).toString().length > 10 ? 2 : 1
-  console.log(Number((a / b).toFixed(10)), a / b);
+
   return Number((a / b).toFixed(10)) == a / b ? 1 : 2;
 }
