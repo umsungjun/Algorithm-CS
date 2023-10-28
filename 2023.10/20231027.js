@@ -23,7 +23,7 @@ function solution(n) {
     answer++;
     while (answer % 3 === 0 || answer.toString().includes("3")) {
       answer++;
-    } // i에 while문을 돌리는 것이 아닌 answer에 돌렸어야 됨
+    }
   }
   return answer;
 }
