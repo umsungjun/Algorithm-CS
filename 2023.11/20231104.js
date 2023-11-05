@@ -13,11 +13,11 @@
 // "abc"	"abc"	0
 
 function solution(A, B) {
-  let arr = [...A];
+  let arr = [...A]; // A를 배열로 Spread한 이유는 Array함수를 사용하기 위함
   for (let i = 0; i < arr.length; i++) {
     if (A === B) return i;
     else {
-      arr.unshift(arr.pop());
+      arr.unshift(arr.pop()); // 배열 제일앞에 제일 뒤 문자열을 이어붙임 // 원본배열에 영향을 줌 unshift, pop
       if (arr.join("") === B) return i + 1;
     }
   }
