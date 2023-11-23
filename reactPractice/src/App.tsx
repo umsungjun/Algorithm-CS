@@ -1,9 +1,9 @@
-import "./index.css";
+import './index.css';
 
 function App() {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className='w-full h-screen flex justify-center items-center'>
+      <h1 className='text-3xl font-bold underline'>Hello world 20231123!</h1>
     </div>
   );
 }
