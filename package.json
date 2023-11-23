@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap-icons": "^1.10.5",
-    "react-infinite-scroll-component": "^6.1.0",
-    "styled-components": "^6.0.2"
-  }
-}
