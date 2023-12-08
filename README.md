@@ -258,6 +258,7 @@ HTML과 CSS 파일이 파싱되고 DOM과 CSSOM으로 변환되면, 브라우저
 
 - const object = {name:엄성준, age:25, food:{us:pizza, jp: ramen}}
 - 위와 같이 선언 및 할당이 된 객체가 있을 때 어떻게 깊은 복사를 해야 될까?라는 고민을 해보았는데 일반적으로 1depth만 복사할 때는 spread 연산자를 통해서 const object2 = {... object1}을 통해서 복사하면 되지만 이렇게 복사할 시 문제점이 있습니다. object2의 객체 안의 객체 즉 2depth에 있는 food의 객체 요소를 변경하게 되면 원본 객체 object의 food 요소에도 영향을 준다는 겁니다. 2depth에도 영향을 안주는 완벽한 DeepCopy를 하기 위해서는 lodash 모듈의 cloneDeep(object)를 이용해서 원본 배열을 복사해 주면 완벽한 깊은 복사를 할 수 있다는 걸 알게 되었습니다!
+- 추가적으로 DeppCopy를 할 수있는 방법은 JSON.parse(JSON.stringify(object));를 통해서도 깊은 복사를 할 수 있습니다.
 
 ## < !DOCTYPE html > 태그의 의미
 
