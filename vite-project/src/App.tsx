@@ -1,24 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const YourComponent = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('입력된 값:', inputValue === '');
+  const handleInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // const validInputValue = e.target.value.toString().split('').map((str)=>{
+    //   if(!isNaN(str) && str !== '.' && str !=='e'){
+    //       return str
+    //   }
+    // }).join('')
+
+    const validInputValue = e.target.value.replace(/[^0-9]/g, "");
+    setInputValue(validInputValue);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <>
       <input
-        type='number'
-        name='test'
-        id='test'
+        type="text"
+        maxLength={5}
+        name="test"
+        id="test"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={(e) => handleInputValue(e)}
       />
-      <button type='submit'>제출</button>
-    </form>
+      <button type="submit">제출</button>
+    </>
   );
 };
 
