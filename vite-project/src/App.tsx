@@ -1,30 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const YourComponent = () => {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // const validInputValue = e.target.value.toString().split('').map((str)=>{
-    //   if(!isNaN(str) && str !== '.' && str !=='e'){
-    //       return str
-    //   }
-    // }).join('')
-
-    const validInputValue = e.target.value.replace(/[^0-9]/g, "");
-    setInputValue(validInputValue);
-  };
+  const [startDate, setStartDate] = useState(new Date());
 
   return (
     <>
-      <input
-        type="text"
-        maxLength={5}
-        name="test"
-        id="test"
-        value={inputValue}
-        onChange={(e) => handleInputValue(e)}
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
       />
-      <button type="submit">제출</button>
     </>
   );
 };
