@@ -12,9 +12,23 @@
       border-radius: 12px;
       overflow: hidden;
     }
+    @keyframes loading {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     .imgBox {
       height: 207px;
       background: #f7f9fa;
+      background-size: 200% 100%;
+      animation: loading 2.5s infinite;
     }
     .infoBox {
       padding: 12px;
@@ -24,6 +38,8 @@
         height: 1.5rem;
         border-radius: 0.5rem;
         background-color: #e4eaef;
+        background-size: 200% 100%;
+        animation: loading 2.5s infinite;
       }
 
       > :nth-child(2) {
@@ -46,12 +62,16 @@
         height: 1rem;
         border-radius: 0.1rem;
         background-color: #e4eaef;
+        background-size: 200% 100%;
+        animation: loading 2.5s infinite;
       }
       .itemMent {
         width: 5rem;
         height: 1rem;
         border-radius: 0.5rem;
         background-color: #e4eaef;
+        background-size: 200% 100%;
+        animation: loading 2.5s infinite;
       }
 
       .priceBox {
@@ -61,7 +81,7 @@
         background: #e4eaef;
         border-radius: 1rem;
         background-size: 200% 100%;
-        background-position: 100% 0;
+        animation: loading 2.5s infinite;
       }
     }
   </style>
