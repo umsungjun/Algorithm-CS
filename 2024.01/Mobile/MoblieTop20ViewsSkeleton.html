@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 모바일 환경 설정 */
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+    }
+    .mobile {
+      width: 720px;
+      background-color: #fff;
+      height: 100vh;
+      padding: 2rem 0 0 2rem;
+    }
+    /* 모바일 환경 설정 */
+    .title {
+      width: 20rem;
+      height: 2.5rem;
+      border-radius: 1rem;
+      background: #e4eaef;
+      animation: loading 2.5s infinite;
+    }
+    .wrapper {
+      margin-top: 2rem;
+      width: 30rem;
+      overflow: hidden;
+    }
+    @keyframes loading {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .imgBox {
+      height: 25rem;
+      background: #e4eaef;
+      animation: loading 2.5s infinite;
+      border-radius: 0.8rem;
+    }
+
+    .infoBox {
+      margin-top: 1.5rem;
+      > :nth-child(1) {
+        width: 100%;
+        height: 3rem;
+        border-radius: 0.5rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+      > :nth-child(2) {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .itemBox {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .lastItemBox {
+        display: flex;
+        justify-content: space-between;
+      }
+      .itemIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 0.1rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+      .itemMent {
+        width: 8rem;
+        height: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+
+      .priceBox {
+        width: 8rem;
+        height: 2rem;
+        border-radius: 0.5rem;
+        background: #e4eaef;
+        border-radius: 1rem;
+        animation: loading 2.5s infinite;
+      }
+    }
+  </style>
+  <body>
+    <div class="mobile">
+      <div class="title"></div>
+      <div class="wrapper">
+        <div class="imgBox"></div>
+        <div class="infoBox">
+          <div></div>
+          <div>
+            <div class="itemBox">
+              <div class="itemIcon"></div>
+              <div class="itemMent"></div>
+            </div>
+            <div class="itemBox">
+              <div class="itemIcon"></div>
+              <div class="itemMent"></div>
+            </div>
+            <div class="itemBox">
+              <div class="itemIcon"></div>
+              <div class="itemMent"></div>
+            </div>
+            <div class="lastItemBox">
+              <div class="itemBox">
+                <div class="itemIcon"></div>
+                <div class="itemMent"></div>
+              </div>
+              <div class="priceBox"></div>
+            </div>
+          </div>
+        </div>
+        <div class="imgBox"></div>
+        <div class="infoBox">
+          <div></div>
+          <div>
+            <div class="itemBox">
+              <div class="itemIcon"></div>
+              <div class="itemMent"></div>
+            </div>
+            <div class="itemBox">
+              <div class="itemIcon"></div>
+              <div class="itemMent"></div>
+            </div>
+            <div class="itemBox">
+              <div class="itemIcon"></div>
+              <div class="itemMent"></div>
+            </div>
+            <div class="lastItemBox">
+              <div class="itemBox">
+                <div class="itemIcon"></div>
+                <div class="itemMent"></div>
+              </div>
+              <div class="priceBox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
