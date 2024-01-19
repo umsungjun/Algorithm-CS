@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @keyframes loading {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .wrapper {
+      width: 1280px;
+    }
+    .itemBox {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      width: 1280px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      height: 25px;
+      > :nth-child(1) {
+        width: 35px;
+        height: 100%;
+        border-radius: 0.25rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+      > :nth-child(2) {
+        height: 100%;
+        flex: 1 1 0;
+        border-radius: 0.5rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+      > :nth-child(3) {
+        width: 40px;
+        height: 100%;
+        border-radius: 0.5rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="itemBox">
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

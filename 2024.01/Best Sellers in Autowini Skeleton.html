@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @keyframes loading {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .wrapper {
+      width: 500px;
+    }
+    .itemBox {
+      display: flex;
+      flex-direction: column;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 10px 20px 10px 0;
+      border-bottom: 1px solid #e4eaef;
+
+      > :nth-child(1) {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        animation: loading 2.5s infinite;
+        > :nth-child(1) {
+          width: 15px;
+          height: 30px;
+          background-color: #e4eaef;
+          border-radius: 0.25rem;
+        }
+        > :nth-child(2) {
+          width: 18px;
+          height: 18px;
+          background-color: #e4eaef;
+          border-radius: 0.25rem;
+        }
+      }
+      > :nth-child(2) {
+        width: 90px;
+        height: 60px;
+        border-radius: 0.5rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+      > :nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        animation: loading 2.5s infinite;
+        flex: 1 1 0;
+        > :nth-child(1) {
+          width: 90px;
+          height: 18px;
+          background-color: #e4eaef;
+          border-radius: 0.25rem;
+        }
+        > :nth-child(2) {
+          width: 150px;
+          height: 18px;
+          background-color: #e4eaef;
+          border-radius: 0.25rem;
+        }
+      }
+      > :nth-child(4) {
+        width: 90px;
+        height: 18px;
+        border-radius: 0.5rem;
+        background-color: #e4eaef;
+        animation: loading 2.5s infinite;
+      }
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="itemBox">
+        <div class="item">
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
