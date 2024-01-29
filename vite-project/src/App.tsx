@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { useState } from "react";
+import "react-datepicker/dist/react-datepicker.css";
 
 const YourComponent = () => {
+  const [text, setText] = useState("");
+  console.log(text);
   return (
     <>
-      <DatePicker
-        selected={null}
-        showTimeSelect
-        onChange={(date) => console.log(date)}
-      />
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      ></textarea>
     </>
   );
 };
