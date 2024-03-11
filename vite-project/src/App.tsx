@@ -1,12 +1,16 @@
-import ShowMoreText from "react-show-more-text";
+import { useState } from "react";
 
 const YourComponent = () => {
+  const [inputVal, setInputVal] = useState("");
+  console.log(inputVal);
   return (
     <>
-      <ShowMoreText lines={3} more='Read More' less='Show less' width={280}>
-        We work with Experienced and certified dismantles in S.Korea. They will
-        carefully dismantle your vehicles to your very order and satisfaction.
-      </ShowMoreText>
+      <input type='text' onChange={(e) => setInputVal(e.target.value)} />
+      {(inputVal.includes("MAEU") || inputVal[0] === "2") && <div>MAERSK</div>}
+      {inputVal.includes("EUKO") && <div>EUKO</div>}
+      {inputVal.includes("SEL") && <div>CMA</div>}
+      {inputVal.includes("SEL") && <div>PIL</div>}
+      {inputVal.includes("SEL") && <div>HMM</div>}
     </>
   );
 };
