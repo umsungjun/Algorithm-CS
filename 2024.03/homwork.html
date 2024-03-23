@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인터넷프로그래밍 11주차 과제 1차</title>
+    <style>
+      h2 {
+        margin: 0;
+      }
+      p {
+        font-size: 1.5rem;
+        display: inline;
+      }
+      .studentWrapper,
+      .avgWrapper,
+      .scoreWrapper {
+        display: flex;
+        flex-direction: column;
+        width: 27.5rem;
+        padding: 1rem;
+        align-items: center;
+        border-radius: 0.5rem;
+        > div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .studentWrapper {
+        border: 4px solid #fe7773;
+      }
+      .avgWrapper {
+        border: 4px solid #78c5ae;
+      }
+      .scoreWrapper {
+        border: 4px solid #a13e97;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="studentWrapper">
+      <h2>학생 목록</h2>
+      <div class="studentBox"></div>
+    </div>
+    <br />
+    <div class="avgWrapper">
+      <h2>3 과목 평균</h2>
+      <div class="avgBox"></div>
+    </div>
+    <br />
+    <div class="scoreWrapper">
+      <h2>석차</h2>
+      <div class="scoreBox"></div>
+    </div>
+  </body>
+  <script src="./homework.js"></script>
+</html>
