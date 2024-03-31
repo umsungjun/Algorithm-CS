@@ -1,4 +1,4 @@
-public class Problem{
+/* public class Problem{
     public static void main(String[] args){
         int a, b, c;
         a = 10;
@@ -15,4 +15,4 @@ public class Problem{
     }
 }
 
-정답: a=10, b=20, c=-10
+정답: a=10, b=20, c=-10 */
