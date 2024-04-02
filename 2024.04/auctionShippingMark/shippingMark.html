@@ -1,0 +1,173 @@
+<div style="padding: 24px">
+  <div class="flex" style="padding: 24px">
+    <div class="left">
+      <h1
+        style="
+          font-size: 28px;
+          font-weight: bold;
+          color: #1f1f1f;
+          letter-spacing: -0.5px;
+        "
+      >
+        Shipping Mark
+      </h1>
+    </div>
+    <div class="right">
+      <button class="btnFunc ExcelDown">Excel</button>&nbsp;&nbsp;&nbsp;
+      <button class="btnFunc blue printPage">Print</button>
+    </div>
+  </div>
+  <div id="printzone" name="printzone" class="print">
+    <table
+      style="
+        width: 1000px;
+        margin: auto;
+        border-collapse: collapse;
+        font-family: 'Roboto', '맑은 고딕', Malgun Gothic, Dotum, sans-serif;
+        font-weight: normal;
+        border: 1px solid #1f1f1f;
+      "
+      border="1"
+      cellspacing="0"
+      cellpadding="0"
+    >
+      <tr>
+        <td
+          colspan="3"
+          style="
+            width: 1000px;
+            padding: 24px 0;
+            height: 150px;
+            background: #000;
+            text-align: center;
+            overflow: hidden;
+          "
+        >
+          <img
+            src="https://image.autowini.com/resources/IMG//common/img_auction_white.png"
+            style="width: 65%"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td
+          colspan="3"
+          style="
+            padding: 20px 12px;
+            height: 100px;
+            font-size: 60px;
+            line-height: 1.1;
+            color: #1f1f1f;
+            font-weight: bold;
+            text-align: center;
+          "
+        >
+          <span>${bookingMap.ITEM_NM}</span>
+        </td>
+      </tr>
+      <tr>
+        <%--qr코드 - width:240px / height:240px 로 고정 , 정사각형이 아닌경우,
+        높이만 height:240px로 고정--%>
+        <td
+          rowspan="3"
+          style="
+            padding: 24px;
+            text-align: center;
+            vertical-align: middle;
+            border-right: none;
+          "
+        >
+          <div id="qrCode" style="width: 240px; height: 240px"></div>
+        </td>
+        <td
+          colspan="2"
+          style="
+            padding: 12px 12px;
+            height: 100px;
+            font-size: 56px;
+            color: #1f1f1f;
+            font-weight: bold;
+            text-align: center;
+          "
+        >
+          ${itemMap.V_VIN_NUM}
+        </td>
+      </tr>
+      <tr>
+        <td
+          colspan="2"
+          style="
+            padding: 12px 12px;
+            height: 100px;
+            font-size: 52px;
+            line-height: 1.2;
+            color: #1f1f1f;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: -0.5px;
+          "
+        >
+          ${quotationMap.COUNTRY_NM}, ${quotationMap.PORT_NM}
+        </td>
+      </tr>
+      <tr>
+        <td
+          colspan="3"
+          style="padding: 12px; text-align: right; vertical-align: top"
+        >
+          <c:if
+            test="${bookingMap.SHIPPING_TYPE eq 'C010' || bookingMap.SHIPPING_TYPE eq 'C050'}"
+          >
+            <img
+              style="width: 85px; height: 85px"
+              src="/resources/images/common/img_container.png"
+              alt="container"
+            />
+          </c:if>
+        </td>
+      </tr>
+      <tr>
+        <td
+          colspan="3"
+          style="
+            padding: 12px;
+            background: #221477;
+            height: 100px;
+            text-align: center;
+          "
+        >
+          <span
+            style="
+              font-size: 30px;
+              color: #fff;
+              line-height: 70px;
+              font-style: italic;
+              vertical-align: top;
+              font-weight: bold;
+            "
+            >Shipped by WiniLogis</span
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            style="height: 60px"
+            src="https://image.autowini.com/resources/IMG/renew/common/logo_winiLogis_white@x3.png"
+            alt="container"
+          />
+        </td>
+      </tr>
+    </table>
+    <p
+      style="
+        padding: 12px 0 0;
+        margin: 0;
+        text-align: center;
+        font-size: 15px;
+        line-height: 23px;
+        color: #444;
+        letter-spacing: 0.2px;
+      "
+    >
+      www.AUCTIONWINI.com
+    </p>
+  </div>
+</div>
