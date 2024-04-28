@@ -1,3 +1,5 @@
+/* 나의 풀이 */
+
 function solution(data) {
   let count = 0;
   const patternArr = ["r", "e", "v"];
