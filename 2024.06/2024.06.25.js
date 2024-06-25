@@ -48,8 +48,6 @@ function solution(data) {
     } else if (startingNumber < i[1].length) {
       return answer;
     }
-
-    startingNumber - selectedNumber; // 선발 인원 - 선발 된 인원
   }
   answer.sort().reverse(); // 역순 정렬
   return answer;
