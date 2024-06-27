@@ -15,9 +15,17 @@ function solution() {
       b[i],
     ]); /* 배열 a, b를 받고 a배열의 v(value)를 순회할 때 b의 i(index)의 해당하는 값을 배열로 return */
 
-  console.log(
+  /* console.log(
     zip(data[0].match(/[a-zA-z]/g), data[0].match(/\d+/g))
-  ); /* [ [ 'A', '10' ], [ 'B', '20' ], [ 'A', '30' ] ] */
+  );  [ [ 'A', '10' ], [ 'B', '20' ], [ 'A', '30' ] ] */
+
+  const map = new Map();
+
+  map.set("num1", 1);
+  map.set("num2", 2);
+  map.set("num3", 3);
+
+  console.log(Math.min(...map.values()));
 
   return data;
 }
