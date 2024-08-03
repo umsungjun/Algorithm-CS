@@ -42,3 +42,9 @@
 
 - 가시성이 변경되는 순간(opacity, background-color, visibility, outline 등등)
 - Reflow가 실행된 순간 뒤에 실행됩니다.
+
+<br>
+
+# 주소창에 google.com을 입력하면 일어나는 일
+
+1. 사용자가 웹 브라우저를 통해 google.com 을 입력하면 URL 주소 중 도메인 네임 부분을 DNS 서버에서 검색합니다.
