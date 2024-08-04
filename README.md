@@ -52,3 +52,19 @@
 3. 브라우저는 `HTTP 프로토콜`을 사용하여 요청 메시지를 생성하고 HTTP 요청 메시지는 TCP/IP 프로토콜을 사용하여 서버로 전송됩니다.
 4. 서버는 `response` 메시지를 생성하여 다시 브라우저에게 데이터를 전송합니다.
 5. 브라우저는 `response`를 받아 파싱하여 화면에 렌더링합니다.
+
+<br>
+
+# 호이스팅(hoisting)이란?
+
+- 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것을 의미합니다. `var`로 선언한 변수의 경우 호이스팅 시 `undefined`로 변수를 초기화합니다. 반면 `let`과 `const`로 선언한 변수의 경우 호이스팅 시 변수를 초기화하지 않습니다.
+
+```
+console.log(name); // undefined
+var name = "sungJun";
+console.log(name); // sungJun
+```
+
+- 위의 예제에서는 `var name = "sungJun"`가 작성되기 전 `console.log(name)`은 초기화 된 `var name;`을 출력한다는 의미로 `undefined`를 출력하는 것이다.
+
+- `var`는 선언, 초기화가 동시에 이루어지기 때문에 `undefined`를 출력하지만 `let, const`는 선언단계만 호이스팅 되기 때문에 `Reference Error`를 출력합니다.
