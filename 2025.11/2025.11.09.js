@@ -28,3 +28,18 @@ function solution(n) {
 
   return answer;
 }
+
+// 프로그래머스 - 수열과 구간 쿼리 4
+function solution(arr, queries) {
+  queries.forEach((q) => {
+    const [s, e, k] = q;
+
+    for (let i = s; i <= e; i++) {
+      if (i % k === 0) {
+        arr[i] += 1;
+      }
+    }
+  });
+
+  return arr;
+}
