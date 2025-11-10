@@ -10,3 +10,31 @@ function solution(q, r, code) {
 
   return answer;
 }
+
+// 프로그래머스 - 조건에 맞게 수열 변환하기 2
+function solution(arr) {
+  let answer = 0;
+  let prevArr = JSON.stringify(arr);
+
+  while (1) {
+    const curArr = JSON.stringify(
+      JSON.parse(prevArr).map((num) => {
+        if (num >= 50 && num % 2 === 0) {
+          return num / 2;
+        } else if (num < 50 && num % 2 === 1) {
+          return num * 2 + 1;
+        }
+        return num;
+      })
+    );
+
+    if (prevArr === curArr) {
+      break;
+    }
+
+    answer++;
+    prevArr = curArr;
+  }
+
+  return answer;
+}
