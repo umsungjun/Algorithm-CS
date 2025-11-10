@@ -61,3 +61,19 @@ function solution(left, right) {
 
   return answer;
 }
+
+// 프로그래머스 - 컨트롤 제트
+function solution(s) {
+  let answer = 0;
+
+  const splitS = s.split(" ").map(Number);
+  splitS.forEach((num, i) => {
+    if (isNaN(num)) {
+      answer -= Number(splitS[i - 1]);
+    } else {
+      answer += num;
+    }
+  });
+
+  return answer;
+}
