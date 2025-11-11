@@ -57,3 +57,18 @@ function solution(str_list) {
     return str_list.slice(fIdxR + 1);
   }
 }
+
+// 프로그래머스 - 소인수분해
+function solution(n) {
+  const answer = new Set();
+
+  for (let i = 2; i <= n; i++) {
+    while (n % i === 0) {
+      // n을 i로 나눴을 때 0이 아닐 때 까지 반복
+      answer.add(i);
+      n /= i;
+    }
+  }
+
+  return [...answer];
+}
