@@ -49,3 +49,19 @@ function solution(arr) {
 
   return stk;
 }
+
+// 프로그래머스 - 문자열 여러번 뒤집기
+function solution(my_string, queries) {
+  const stringArr = my_string.split("");
+
+  queries.forEach(([s, e]) => {
+    const sliceStr = stringArr
+      .join("")
+      .slice(s, e + 1)
+      .split("")
+      .reverse();
+    stringArr.splice(s, e - s + 1, ...sliceStr);
+  });
+
+  return stringArr.join("");
+}
