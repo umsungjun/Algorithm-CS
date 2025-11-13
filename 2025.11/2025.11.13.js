@@ -28,3 +28,8 @@ function solution(numbers, k) {
 
   return numbers[index % numbers.length];
 }
+
+// 프로그래머스 - 두 수의 합
+function solution(a, b) {
+  return BigInt(a) + BigInt(b) + "";
+}
