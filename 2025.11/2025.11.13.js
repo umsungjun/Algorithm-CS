@@ -20,3 +20,11 @@ function solution(my_string) {
 
   return sum;
 }
+
+// 프로그래머스 - 공 던지기
+// 단순 규칙을 파악해서 해결함
+function solution(numbers, k) {
+  let index = 2 * (k - 1);
+
+  return numbers[index % numbers.length];
+}
