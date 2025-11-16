@@ -19,3 +19,21 @@ function solution(sides) {
 
   return answer.size;
 }
+
+// 프로그래머스 - 행령의 덧셈
+function solution(arr1, arr2) {
+  const answer = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    const arr = [];
+
+    for (let j = 0; j < arr1[i].length; j++) {
+      let hap = arr1[i][j] + arr2[i][j];
+
+      arr.push(hap);
+    }
+    answer.push(arr);
+  }
+
+  return answer;
+}
