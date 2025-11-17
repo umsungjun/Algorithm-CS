@@ -24,3 +24,23 @@ process.stdin.on("data", (data) => {
 
   console.log(answer);
 });
+
+// 프로그래머스 - 그림 확대
+function solution(picture, k) {
+  const answer = [];
+
+  picture.forEach((item) => {
+    let sizeUpItem = "";
+
+    for (let s of item) {
+      for (let i = 0; i < k; i++) {
+        sizeUpItem += s;
+      }
+    }
+    for (let i = 0; i < k; i++) {
+      answer.push(sizeUpItem);
+    }
+  });
+
+  return answer;
+}
