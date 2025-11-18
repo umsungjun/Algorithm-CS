@@ -10,3 +10,26 @@ function solution(A, B) {
   }
   return answer;
 }
+
+// 프로그래머스 - JadenCase 문자열 만들기
+function solution(s) {
+  const splitS = s.split(" ");
+
+  return splitS
+    .map((str) => {
+      let newStr = "";
+      const firstChar = str.charAt(0); // 첫 글자
+      const lestChar = str.slice(1); // 남은 글자
+
+      if (isNaN(firstChar)) {
+        // 첫 글자가 문자인 경우
+        newStr += firstChar.toUpperCase();
+      } else {
+        newStr += firstChar;
+      }
+      newStr += lestChar.toLowerCase();
+
+      return newStr;
+    })
+    .join(" ");
+}
