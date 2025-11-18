@@ -33,3 +33,16 @@ function solution(s) {
     })
     .join(" ");
 }
+
+// 프로그래머스 - 같은 숫자는 싫어
+function solution(arr) {
+  const answer = [];
+
+  for (let i of arr) {
+    if (answer[answer.length - 1] !== i) {
+      answer.push(i);
+    }
+  }
+
+  return answer;
+}
