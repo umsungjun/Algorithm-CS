@@ -24,3 +24,27 @@ function solution(keyinput, board) {
 
   return answer;
 }
+
+// 프로그래머스 - 대공약수와 최소공배수
+function solution(n, m) {
+  const minValue = Math.min(n, m); // 작은 수
+  const maxValue = Math.max(n, m); // 큰 수
+
+  let maxYak = minValue; // 최대 공약수
+  let minGong = maxValue; // 최소 공배수
+
+  for (let i = 1; i <= minValue; i++) {
+    if (n % i === 0 && m % i === 0) {
+      maxYak = i;
+    }
+  }
+
+  for (let i = maxValue; i <= minValue * maxValue; i++) {
+    if (i % n === 0 && i % m === 0) {
+      minGong = i;
+      break;
+    }
+  }
+
+  return [maxYak, minGong];
+}
