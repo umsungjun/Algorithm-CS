@@ -48,3 +48,8 @@ function solution(n, m) {
 
   return [maxYak, minGong];
 }
+
+// 프로그래머스 - 종이 자르기
+function solution(M, N) {
+  return M * N - 1;
+}
