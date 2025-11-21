@@ -13,3 +13,21 @@ function solution(t, p) {
 
   return answer;
 }
+
+// 프로그래머스 - 로그인 성공?
+function solution(id_pw, db) {
+  const [id, pw] = id_pw;
+
+  const objDb = {};
+  db.forEach(([key, pw]) => (objDb[key] = pw));
+
+  if (objDb[id]) {
+    if (objDb[id] === pw) {
+      return "login";
+    } else {
+      return "wrong pw";
+    }
+  } else {
+    return "fail";
+  }
+}
