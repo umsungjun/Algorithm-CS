@@ -27,3 +27,19 @@ function solution(dots) {
 
 // 직사각형의 너비 구하기
 // 가로 * 세로
+
+// 프로그래머스 - 예산
+function solution(d, budget) {
+  d.sort((a, b) => a - b);
+  let answer = 0;
+
+  for (let n of d) {
+    if (budget - n < 0) {
+      break;
+    }
+    answer++;
+    budget -= n;
+  }
+
+  return answer;
+}
