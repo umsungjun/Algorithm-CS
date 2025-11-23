@@ -23,3 +23,22 @@ function solution(number) {
 
   return answer;
 }
+
+// 프로그래머스 - 이상한 문자 만들기
+function solution(s) {
+  return s
+    .split(" ")
+    .map((word) => {
+      return word
+        .split("")
+        .map((str, i) => {
+          if (i % 2 === 0) {
+            return str.toUpperCase();
+          } else {
+            return str.toLowerCase();
+          }
+        })
+        .join("");
+    })
+    .join(" ");
+}
