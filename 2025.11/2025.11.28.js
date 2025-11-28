@@ -45,3 +45,21 @@ function solution(sizes) {
 
   return value1 * value2;
 }
+
+// 프로그래머스 - 문자열 밀기
+function solution(A, B) {
+  if (A === B) return 0;
+
+  let splitWord = A.split("");
+
+  for (let i = 0; i < A.length; i++) {
+    const s = splitWord.pop();
+    splitWord.unshift(s);
+
+    if (splitWord.join("") === B) {
+      return i + 1;
+    }
+  }
+
+  return -1;
+}
