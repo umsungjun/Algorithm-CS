@@ -17,3 +17,22 @@ function solution(s) {
 
   return splitS.length === 0 ? 1 : 0;
 }
+
+// stack 자료구조를 활용해서 효율성 테스트 통과
+function solution(s) {
+  const answer = [];
+
+  for (let i of s) {
+    if (answer.length < 1) {
+      answer.push(i);
+    } else {
+      if (answer[answer.length - 1] === i) {
+        answer.pop();
+      } else {
+        answer.push(i);
+      }
+    }
+  }
+
+  return answer.length === 0 ? 1 : 0;
+}
