@@ -8,3 +8,17 @@ function solution(n) {
 
   return pibo[n];
 }
+
+// 배열 필요없이 더 최적화 할 수 있는 방법
+function solution(n) {
+  const a = 0;
+  const b = 1;
+
+  for (let i = 2; i <= n; i++) {
+    const next = (a + b) % 1234567;
+    a = b;
+    b = next;
+  }
+
+  return n === 0 ? 0 : b;
+}
