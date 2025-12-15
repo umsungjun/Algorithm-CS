@@ -22,3 +22,23 @@ function solution(n) {
 
   return n === 0 ? 0 : b;
 }
+
+// 프로그래머스 - 가장 가까운 같은 글자
+function solution(s) {
+  const obj = {};
+  const answer = [];
+
+  for (let i = 0; i < s.length; i++) {
+    const key = s[i];
+
+    if (obj[key] === undefined) {
+      answer.push(-1);
+      obj[key] = i;
+    } else {
+      answer.push(i - obj[key]);
+      obj[key] = i;
+    }
+  }
+
+  return answer;
+}
