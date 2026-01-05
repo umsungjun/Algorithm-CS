@@ -17,3 +17,22 @@ function solution(people, limit) {
 
   return answer;
 }
+
+function solution(people, limit) {
+  people.sort((a, b) => a - b); // 무게 오름차순 정렬
+
+  let answer = 0;
+  let left = 0; // 첫 번째 인덱스
+  let right = people.length - 1; // 마지막 인덱스
+
+  while (right >= left) {
+    if (people[left] + people[right] <= limit) {
+      left++; // 양쪽을 한칸씩 줄임
+    }
+
+    right--;
+    answer++;
+  }
+
+  return answer;
+}
