@@ -24,3 +24,20 @@ function solution(n, arr1, arr2) {
 
   return answer;
 }
+
+// 프로그래머스 - 연속 부분 수열 합의 개수
+function solution(elements) {
+  const set = new Set(); // 합 중복 제거
+
+  for (let i = 0; i < elements.length; i++) {
+    for (let j = 0; j < elements.length; j++) {
+      let sum = 0;
+      for (let k = 0; k < i + 1; k++) {
+        let idx = (j + k) % elements.length; // length보다 큰 index는 -length한것과 동일하게 처리
+        sum += elements[idx];
+      }
+      set.add(sum);
+    }
+  }
+  return set.size;
+}
