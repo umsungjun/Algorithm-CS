@@ -16,3 +16,22 @@ function solution(n, left, right) {
 /* 
     테스트는 통과하지만 효율성에서 실패
 */
+
+// 최적화 방식
+function solution(n, left, right) {
+  const answer = [];
+
+  for (let i = left; i <= right; i++) {
+    const row = Math.floor(i / n);
+    const col = i % n;
+
+    answer.push(Math.max(row + 1, col + 1));
+  }
+
+  return answer;
+}
+
+// 1 2 3 4
+// 2 2 3 4
+// 3 3 3 4
+// 4 4 4 4
