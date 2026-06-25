@@ -9,3 +9,18 @@ def f(a): # 함수 정의 def
     return result # 10
 
 print(f([1,2,3,4]))
+
+# ----
+
+s = input("입력 : ")  # 입력: HumanDev
+
+x = [] 
+
+for i in s.split():
+    x.append(i[::-1]) # 역순으로 HumanDev -> veDnamuH x 배열에 추가
+
+y = ''.join(x) # y = 'veDnamuH'
+
+z = ''.join([c for c in y if c not in 'ong']) # ['v', 'e', 'D', 'a', 'm', 'u', 'H'] -> veDamuH
+
+print(z) # veDamuH
