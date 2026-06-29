@@ -1,7 +1,5 @@
-def func(x):
-    for i in range(len(x) // 2): # 6 // 2 = 3
-        x[i], x[-i-1] = x[-i-1], x[i]
+a, b = 2, 5
+b = a + b
+print(a, b)
 
-x = [1, 2, 3, 4, 5, 6]
-func(x)
-print(sum(x[::2]) - sum(x[1::2]))
+# 2 7
