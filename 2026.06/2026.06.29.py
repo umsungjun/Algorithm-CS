@@ -1,5 +1,7 @@
-a = ["Seoul", "Kyeonggi", "Incheon", "Daejeon", "Daegu", "Pusan"]
-str01 = "S"
-for i in a:
-    str01 = str01 + i[1] # Se, Sey, Seyn, Seyna, Seynaa, Seynaau
-print(str01)
+def func(x):
+    for i in range(len(x) // 2): # 6 // 2 = 3
+        x[i], x[-i-1] = x[-i-1], x[i]
+
+x = [1, 2, 3, 4, 5, 6]
+func(x)
+print(sum(x[::2]) - sum(x[1::2]))
