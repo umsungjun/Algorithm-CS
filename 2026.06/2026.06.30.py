@@ -1,8 +1,10 @@
-scores = {"a": 2, "b": 4}
-scores["a"] += 3
-print(scores["a"] + scores.get("c", 1))
+def fn(str, k):
+    s = str.split('T')
+    return s[k]
 
-""" 
- - 파이썬에서 get() 메서드는 (key, default)로 동작
- 정답: 6
-"""
+str = "ITISTESTSTRING"
+k = 3
+result = fn(str, k)
+print(result)
+
+# 자바 문제와 동일 답: S
