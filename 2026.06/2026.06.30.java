@@ -1,28 +1,21 @@
-interface A {
-    int sum(int[] a, boolean odd);
-}
-class B implements A {
-    public int sum(int[] a, boolean odd) {
-        int result = 0;
-        for (int i = 0; i < a.length; i++) {
-            if ((odd && a[i] % 2 != 0) || (!odd && a[i] % 2 == 0))
-                result += a[i];
-        }
-        return result;
+public class Main {
+    public static void main(String[] args) {
+        Integer a = 100;
+        Integer b = 100;
+        Integer c = 200;
+        Integer d = 200;
+        System.out.println(a == b);
+        System.out.println(c == d);
     }
 }
 
-class Gamja {
-    public static void main(String[] args) {
-        int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        B x = new B();
-        System.out.print(x.sum(a, true) + ", " + x.sum(a, false));
-    }
-}
 
 /* 
- - (x.sum(a, true): a 배열에서 홀수의 합
- - (x.sum(a, false): a 배열에서 짝수의 합
+ - Integer는 Int와 다른 객체로 감싼 래퍼 클래스
+ - 값을 비교하려면 equals() 메서드를 사용해야 함
+ - -128 ~ 127 범위의 Integer 객체를 JVM 내부에 미리 만들어 캐시
+ - 그래서 a == b는 true, c == d는 false
 
- 정답: 25, 20
+ - 정답: true
+        false
  */
