@@ -1,11 +1,12 @@
 #include <stdio.h>
 int main() {
-    char *s = "GAMJA";
-    printf("%c", *(s + 2));
+    char ch = 'A';
+    printf("%d", ch + 2);
     return 0;
 }
 
 /* 
- - *(s + 2) = s[2] = 'M'
- - 정답: M 
+ - '0'의 아스키 코드 값 48
+ - A의 아스키 코드 값 65
+ - a의 아스키 코드 값 97
 */
