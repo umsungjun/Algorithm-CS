@@ -1,4 +1,8 @@
-def func(num1, num2=2):
-    print('a=', num1, 'b=', num2) # a= 20 b= 2 (중간에 , 는 생략) 
+print("A", "B", sep="-", end="!") # A-B!C
+print("C") # C
 
-func(20)
+""" 
+ - sep: 구분자(기본 값: ' ')
+ - end: 출력 후 끝에 붙는 문자열(기본 값: '\n')
+ - 정답: A-B!C
+"""
