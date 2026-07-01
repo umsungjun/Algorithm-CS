@@ -1,20 +1,17 @@
-class Box {
-    private int value = 3;
 
-    public int getValue() {
-        return value;
-    }
+class Static {
+    public int a = 20;
+    static int b = 0;
 }
-
-public class Main {
+public class Gamja {
     public static void main(String[] args) {
-        Box b = new Box();
-        System.out.print(b.getValue());
+        int a;
+        a = 10;
+        Static.b = a; // Static.b = 10으로 초기화
+        Static st = new Static(); // Static 타입에 st라는 객체 생성
+        System.out.println(Static.b++); // Static.b = 10 출력 후 11로 증가
+        System.out.println(st.b); // Static.b = 11 출력
+        System.out.println(a); // a = 10 출력
+        System.out.print(st.a); // st.a = 20 출력
     }
 }
-
-/* 
- - value: Box 클래스의 private 멤버 변수로, 외부에서 직접 접근할 수 없음
- - getValue(): Box 클래스의 public 메서드로, value 값을 반환함
- - 정답: 3
- */
