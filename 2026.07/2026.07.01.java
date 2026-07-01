@@ -1,28 +1,20 @@
-class Gamja {
-    static private Gamja instance = null;
-    private int count = 0;
-    static public Gamja get() {
-        if (instance == null) {
-            instance = new Gamja();
-        }
-        return instance;
+class Box {
+    private int value = 3;
+
+    public int getValue() {
+        return value;
     }
-    public void count() { count++; }
-    public int getCount() { return count; }
 }
-public class Gamja2 {
+
+public class Main {
     public static void main(String[] args) {
-        Gamja s1 = Gamja.get(); // instance = null -> new Gamja() -> instance = new Gamja()
-        s1.count(); // count = 1
-        Gamja s2 = Gamja.get(); // 기존 instance 반환
-        s2.count(); // count = 2
-        Gamja s3 = Gamja.get(); // 기존 instance 반환
-        s3.count(); // count = 3
-        s1.count(); // count = 4
-        System.out.print(s1.getCount()); // 정답: 4
+        Box b = new Box();
+        System.out.print(b.getValue());
     }
 }
 
 /* 
- - 하나의 인스턴스만 생성해서 공유하는 싱글톤 패턴
+ - value: Box 클래스의 private 멤버 변수로, 외부에서 직접 접근할 수 없음
+ - getValue(): Box 클래스의 public 메서드로, value 값을 반환함
+ - 정답: 3
  */
