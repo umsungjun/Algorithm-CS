@@ -1,14 +1,8 @@
-public class Gamja{
-    public static void main(String[] args){
-        System.out.print(Gamja.check(1));
-    }
-    _______ String check(int num){
-        return (num>=0) ? "positive" : "negative";
+public class Main {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("정처기"); // StringBuilder 객체 생성 
+        sb.append("감자"); // "정처기감자"
+        sb.insert(3, "-"); // "정처기-감자"
+        System.out.println(sb.toString()); // "정처기-감자" 출력
     }
 }
-
-/* [출력값]
-positive 
-
- - static을 넣으면 객체 없이도 check 메서드를 호출할 수 있음
-*/
