@@ -1,20 +1,14 @@
-class Counter {
-    static int n = 0; // static 변수는 모든 인스턴스가 같은 변수를 공유합니다. 
-
-    void add() {
-        n++;
+public class Gamja{
+    public static void main(String[] args){
+        System.out.print(Gamja.check(1));
+    }
+    _______ String check(int num){
+        return (num>=0) ? "positive" : "negative";
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        Counter a = new Counter();
-        Counter b = new Counter();
+/* [출력값]
+positive 
 
-        a.add();
-        b.add();
-        a.add();
-
-        System.out.print(Counter.n); // 정답: 3
-    }
-}
+ - static을 넣으면 객체 없이도 check 메서드를 호출할 수 있음
+*/
