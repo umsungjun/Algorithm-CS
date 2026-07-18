@@ -1,21 +1,26 @@
 #include <stdio.h>
-int isPrime(int number) {
+
+double arr1(int p[], int len) {
+    double ar = 0;
     int i;
-    for (i = 2; i < number; i++) {
-        if (number % i == 0) return 0;
+    for (i = 0; i < len; i++) {
+        ar += (double)p[i];
     }
-    return 1;
-}
-int main() {
-    int number = 13195, max_div = 0, i;
-    for (i = 2; i < number; i++)
-        if (isPrime(i) == 1 && number % i == 0)
-            max_div = i;
-    printf("%d", max_div);
-    return 0;
+    return ar / len;
 }
 
-/* 
- 정답: 29
- 이 과정을 만족하는 수: 5, 7, 13, 29
-*/
+double arr2(int *p, int len) {
+    double ar = 0;
+    int i;
+    for (i = 0; i < len; i++) {
+        ar += (double)(*(p + i));
+    }
+    return ar / len;
+}
+
+int main() {
+    int arr[10] = {95, 15, 80, 55, 25, 45, 70, 60, 50, 35};
+    int len = 10;
+    printf("%.2f", arr1(arr, len) + arr2(arr, len));
+    return 0;
+}
